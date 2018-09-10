@@ -1,0 +1,115 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.necohorne.socialmanager"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        buildConfigField("String", "FABRIC_API_KEY", FABRIC_API_KEY)
+        buildConfigField("String", "FACEBOOK_CLIENT_TOKEN", FACEBOOK_CLIENT_TOKEN)
+        buildConfigField("String", "FACEBOOK_APP_ID", FACEBOOK_APP_ID)
+        buildConfigField("String", "FACEBOOK_SECRET", FACEBOOK_SECRET)
+        buildConfigField("String", "FACEBOOK_LOGIN_PROTOCAL", FACEBOOK_LOGIN_PROTOCAL)
+        buildConfigField("String", "TWITTER_API_KEY", TWITTER_API_KEY)
+        buildConfigField("String", "TWITTER_API_SECRET", TWITTER_API_SECRET)
+        buildConfigField("String", "TWITTER_ACCESS_TOKEN", TWITTER_ACCESS_TOKEN)
+        buildConfigField("String", "TWITTER_TOKEN_SECRET", TWITTER_TOKEN_SECRET)
+        buildConfigField("String", "LINKEDIN_SECRET", LINKEDIN_SECRET)
+        buildConfigField("String", "LINKEDIN_CLIENT_ID", LINKEDIN_CLIENT_ID)
+        buildConfigField("String", "INSTAGRAM_CLIENT_ID", INSTAGRAM_CLIENT_ID)
+        buildConfigField("String", "INSTAGRAM_CLIENT_SECRET", INSTAGRAM_CLIENT_SECRET)
+        buildConfigField("String", "GOOGLE_API_KEY", GOOGLE_API_KEY)
+        buildConfigField("String", "PINTEREST_APP_ID", PINTEREST_APP_ID)
+        buildConfigField("String", "PINTEREST_APP_SECRET", PINTEREST_APP_SECRET)
+        buildConfigField("String", "PINTEREST_MANIFEST_APP_ID", PINTEREST_MANIFEST_APP_ID)
+        buildConfigField("String", "TWITCH_CLIENT_ID", TWITCH_CLIENT_ID)
+        buildConfigField("String", "TWITCH_CLIENT_SECRET", TWITCH_CLIENT_SECRET)
+        buildConfigField("String", "REDDIT_API_KEY", REDDIT_API_KEY)
+        buildConfigField("String", "VIMEO_CLIENT_ID", VIMEO_CLIENT_ID)
+        buildConfigField("String", "VIMEO_CLIENT_SECRET", VIMEO_CLIENT_SECRET)
+        buildConfigField("String", "VIMEO_ACCESS_TOKEN", VIMEO_ACCESS_TOKEN)
+        buildConfigField("String", "PATREON_CLIENT_ID", PATREON_CLIENT_ID)
+        buildConfigField("String", "PATREON_CLIENT_SECRET", PATREON_CLIENT_SECRET)
+        buildConfigField("String", "PATREON_CREATOR_ACCESS_TOKEN", PATREON_CREATOR_ACCESS_TOKEN)
+        buildConfigField("String", "PATREON_CREATOR_REFRESH_TOKEN", PATREON_CREATOR_REFRESH_TOKEN)
+        buildConfigField("String", "DISCORD_CLIENT_ID", DISCORD_CLIENT_ID)
+        buildConfigField("String", "DISCORD_CLIENT_SECRET", DISCORD_CLIENT_SECRET)
+
+        manifestPlaceholders = [
+                FABRIC_API_KEY           : FABRIC_API_KEY,
+                FACEBOOK_CLIENT_TOKEN    : FACEBOOK_CLIENT_TOKEN,
+                FACEBOOK_APP_ID          : FACEBOOK_APP_ID,
+                FACEBOOK_SECRET          : FACEBOOK_SECRET,
+                FACEBOOK_LOGIN_PROTOCAL  : FACEBOOK_LOGIN_PROTOCAL,
+                TWITTER_API_KEY          : TWITTER_API_KEY,
+                TWITTER_API_SECRET       : TWITTER_API_SECRET,
+                TWITTER_ACCESS_TOKEN     : TWITTER_ACCESS_TOKEN,
+                TWITTER_TOKEN_SECRET     : TWITTER_TOKEN_SECRET,
+                PINTEREST_APP_ID         : PINTEREST_APP_ID,
+                PINTEREST_MANIFEST_APP_ID: PINTEREST_MANIFEST_APP_ID
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.0'
+    implementation 'com.google.firebase:firebase-crash:16.2.0'
+    implementation 'com.google.firebase:firebase-appindexing:16.0.1'
+    implementation 'com.google.firebase:firebase-invites:16.0.3'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.facebook.android:account-kit-sdk:4.+'
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.5'
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.mcxiaoke.volley:library:1.0.+'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    implementation 'com.vimeo.networking:vimeo-networking:1.1.2'
+
+    implementation project(':linkedin-sdk')
+    implementation project(':pdk')
+
+    def room_version = "1.1.1"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    implementation('com.crashlytics.sdk.android:answers:1.4.3@aar') {
+        transitive = true;
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'

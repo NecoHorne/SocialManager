@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "888220780594",
+    "firebase_url": "https://socialmanager-2575b.firebaseio.com",
+    "project_id": "socialmanager-2575b",
+    "storage_bucket": "socialmanager-2575b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888220780594:android:b13ae9d40ee4947c",
+        "android_client_info": {
+          "package_name": "com.necohorne.socialmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888220780594-4ppkr9sro56mpl5tia9n6mkitn14hplb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.necohorne.socialmanager",
+            "certificate_hash": "c84d1faf32526b47cbcdf1e5205ebd9449f22191"
+          }
+        },
+        {
+          "client_id": "888220780594-8f1ijpaoboj2iqm825kqscufuk4qkrq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARbRk-J9mQeFc-KK1E8IYcKW0Z80IO9ys"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888220780594-8f1ijpaoboj2iqm825kqscufuk4qkrq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

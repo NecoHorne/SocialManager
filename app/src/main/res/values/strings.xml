@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SocialManager</string>
+
+    <string name="facebook_app_id">729839487354968</string>
+    <string name="fb_login_protocol_scheme">fb729839487354968</string>
+
+    <!--Social Media Names-->
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="youtube">Youtube</string>
+    <string name="google">Google+</string>
+    <string name="pinterest">Pinterest</string>
+    <string name="twitch">Twitch</string>
+    <string name="reddit">reddit</string>
+    <string name="vimeo">Vimeo</string>
+    <string name="patreon">Patreon</string>
+    <string name="discord">Discord</string>
+
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">LjsTFbGWYuHOpUbE5mvyQ2b6M</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">8sePGgqKYOIYtE7YbmAa3ZCPfHEN21DZCT5O0YVRAGJ6eP30mQ</string>
+    <string name="title_activity_main_drawer">MainDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>
