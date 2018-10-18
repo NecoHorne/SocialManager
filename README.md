@@ -18,7 +18,7 @@ Un-follow
 
 Combined Calender
 
-##Firebase Integration
+## Firebase Integration
 Firebase Authentication
 
 Firebase Analytics
@@ -32,29 +32,29 @@ Firebase Indexing
 Firebase Invites
 
 ## Social Networks
-###Facebook
+### Facebook
 https://developers.facebook.com/
-###Twitter
+### Twitter
 https://developer.twitter.com/en/docs
-###Instagram
+### Instagram
 https://www.instagram.com/developer/
-###LinkedIn
+### LinkedIn
 https://developer.linkedin.com/
-###YouTube
+### YouTube
 https://developers.google.com/youtube/
-###Google+
+### Google+
 https://developers.google.com/apis-explorer/#search/google%20plus/plus/v1/
-###Pinterest
+### Pinterest
 https://developers.pinterest.com/docs/getting-started/introduction/?
 https://github.com/Pinterest/Android-PDK/
-###Twitch
+### Twitch
 https://dev.twitch.tv/docs
-###reddit
+### reddit
 https://github.com/reddit-archive/reddit/wiki/OAuth2
 https://www.reddit.com/dev/api/
-###Vimeo
+### Vimeo
 https://developer.vimeo.com/
 
 https://github.com/vimeo/vimeo-networking-java
-###Patreon
+### Patreon
 https://docs.patreon.com/#introduction
